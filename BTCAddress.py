@@ -5,12 +5,16 @@ import json
 
 class BTCAddress:
 
-	def __init__ (self, jsonString):
+	def __init__ (self, response_string):
 
-		self.address = jsonString["address"]
-		self.num_transactions = jsonString["n_tx"]
-		self.total_BTC_received = jsonString["total_received"]
-		self.total_BTC_sent = jsonString["total_sent"]
-		self.final_balance = jsonString["final_balance"]
-		self.transactions = jsonString["txs"]
+		address_dict = response_string.json()
+
+		self.response_string = response_string
+		self.address_dict = address_dict
+		self.address = address_dict["address"]
+		self.num_transactions = address_dict["n_tx"]
+		self.total_BTC_received = address_dict["total_received"]
+		self.total_BTC_sent = address_dict["total_sent"]
+		self.final_balance = address_dict["final_balance"]
+		self.transactions = address_dict["txs"]
 		
