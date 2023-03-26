@@ -28,8 +28,8 @@ def get_largest_sent_transaction_by_address(bitcoin_address):
 
 		for transaction in address.transactions:
 			for inpt in transaction["inputs"]:
-				if inpt.prev_out.spent == True:
-					maxSpent = max(maxSpent, inpt.value)
+				if inpt["prev_out"]["spent"] == True:
+					maxSpent = max(maxSpent, inpt["prev_out"]["value"])
 			
 	else:
 
