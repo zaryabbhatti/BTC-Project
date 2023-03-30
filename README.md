@@ -1,6 +1,6 @@
 # BTC-Project Personal Project
 
 #TODO:
--Need to create an object for the transaction response
+- functions for total amount of bitcoin sent and ottal amount of bitcoin received
 -when u find the largest transaction, mka e aviewdetails button and then call the single transaction api
--create a transaction object, within transaction object, create inputs object, and inside inputs object, craete spending outpoints bject and prev_out obbject
+-
